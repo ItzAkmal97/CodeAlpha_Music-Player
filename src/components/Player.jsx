@@ -55,11 +55,11 @@ export default function Player({
       {/* Display the next, previous, shuffle, and play/pause buttons */}
       <section className="bg-stone-200 flex justify-center">
         <div className="my-5 flex items-center md:flex flex-wrap">
-          <button className={cssClassShuffle} onClick={onShuffle}>Shuffle</button>
+          <button disabled={disableBtn} className={cssClassShuffle} onClick={onShuffle}>Shuffle</button>
           <button disabled={disableBtn} className="bg-white px-2 py-1 rounded-full mx-4 w-20" onClick={onPrevious}>Previous</button>
           <button disabled={disableBtn} className="bg-white px-6 py-2 rounded-full font-bold mx-4 w-24" onClick={onPlayPause}>{isPlaying ? 'Pause' : 'Play'}</button>
           <button disabled={disableBtn} className="bg-white px-2 py-1 rounded-full mx-4 w-20" onClick={onNext}>Next</button>
-          <button className={cssClassRepeat} onClick={onRepeat}>Repeat</button>
+          <button disabled={disableBtn} className={cssClassRepeat} onClick={onRepeat}>Repeat</button>
         </div>
       </section>
     </div>
