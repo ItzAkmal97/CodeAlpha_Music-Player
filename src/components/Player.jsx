@@ -15,8 +15,8 @@ export default function Player({
 }) {
 
   const disableBtn = !selectedTrack;
-  let cssClassRepeat = isRepeat ? "text-gray-800 font-bold text-sm px-2 py-1 rounded-full mx-4 w-16" : "text-gray-500 font-bold text-sm px-2 py-1 rounded-full mx-4 w-16";
-  let cssClassShuffle = isShuffle ? "text-gray-800 font-bold text-sm px-2 py-1 rounded-full mx-4 w-16" : "text-gray-500 font-bold text-sm px-2 py-1 rounded-full mx-4 w-16";
+  let cssClassRepeat = isRepeat ? "text-red-600 font-bold text-sm px-2 py-1 rounded-full mx-4 w-16" : "text-gray-500 font-bold text-sm px-2 py-1 rounded-full mx-4 w-16";
+  let cssClassShuffle = isShuffle ? "text-red-800 font-bold text-sm px-2 py-1 rounded-full mx-4 w-16" : "text-gray-500 font-bold text-sm px-2 py-1 rounded-full mx-4 w-16";
   return (
     <div>
       {/* Display the selected track's cover, name, and artist */}
@@ -55,11 +55,11 @@ export default function Player({
       {/* Display the next, previous, shuffle, and play/pause buttons */}
       <section className="bg-stone-200 flex justify-center">
         <div className="my-5 flex items-center md:flex flex-wrap">
-          <button className={cssClassShuffle} onClick={onShuffle}>{isShuffle ? 'Unshuffle' : 'Shuffle'}</button>
+          <button className={cssClassShuffle} onClick={onShuffle}>Shuffle</button>
           <button disabled={disableBtn} className="bg-white px-2 py-1 rounded-full mx-4 w-20" onClick={onPrevious}>Previous</button>
           <button disabled={disableBtn} className="bg-white px-6 py-2 rounded-full font-bold mx-4 w-24" onClick={onPlayPause}>{isPlaying ? 'Pause' : 'Play'}</button>
           <button disabled={disableBtn} className="bg-white px-2 py-1 rounded-full mx-4 w-20" onClick={onNext}>Next</button>
-          <button className={cssClassRepeat} onClick={onRepeat}>{isRepeat ? 'On Repeat' : 'Repeat'}</button>
+          <button className={cssClassRepeat} onClick={onRepeat}>Repeat</button>
         </div>
       </section>
     </div>
