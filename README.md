@@ -1,4 +1,4 @@
-# CodeAlpha Music Player
+# Music Player
 
 A music player with shuffle and repeat functionality created using React.js and TailwindCSS.
 
